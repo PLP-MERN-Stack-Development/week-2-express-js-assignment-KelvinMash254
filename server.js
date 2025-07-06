@@ -4,6 +4,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
+const logger = require('./middleware/logger');
+const errorHandler = require('./middleware/errorHandler');
+const productRoutes = require('./routes/products');
 
 // Initialize Express app
 const app = express();
@@ -11,6 +14,9 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware setup
 app.use(bodyParser.json());
+app.use(logger); // custom logging middleware
+app.use('/api/products', productRoutes); // product routes
+app.use(errorHandler); // global error handler
 
 // Sample in-memory products database
 let products = [

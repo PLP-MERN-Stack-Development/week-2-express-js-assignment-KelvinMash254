@@ -30,12 +30,25 @@ You will:
 - `Week2-Assignment.md`: Detailed assignment instructions
 - `server.js`: Starter Express.js server file
 - `.env.example`: Example environment variables file
+- ` routes/`: Contains product route definitions
+- `controllers/`: Contains route handler logic
+-`middleware/`: Custom middleware (logger, auth, validation, error handler)
+-`utils/`: Custom error classes
+-`data/products.js`: In-memory product database
+
 
 ## Requirements
 
 - Node.js (v18 or higher)
 - npm or yarn
 - Postman, Insomnia, or curl for API testing
+
+
+## Authentication
+x-api-key: 12345
+
+## Environment Variables
+
 
 ## API Endpoints
 
